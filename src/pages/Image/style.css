@@ -1,0 +1,29 @@
+.custom-upload input[type='file'] {
+    /* Стилизация элемента input с типом file */
+    display: none;
+  }
+  
+  .custom-upload label {
+    /* Стилизация метки */
+    display: inline-block;
+    background-color: #1890ff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-upload label:hover {
+    /* Изменение стиля метки при наведении курсора */
+    background-color: #40a9ff;
+  }
+  
+  .custom-upload label:active {
+    /* Изменение стиля метки при активации */
+    background-color: #096dd9;
+  }
+  
+  .custom-upload input[type='file']:focus + label {
+    /* Изменение стиля метки при фокусе на элементе input */
+    outline: 2px solid #1890ff;
+  }
