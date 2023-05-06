@@ -1,7 +1,11 @@
 import "./styles.css";
 import { motion, useScroll } from "framer-motion";
-import { Card } from 'antd';
-
+import image from '../../assets/neiron4.webp'
+import image1 from '../../assets/neiron2.png'
+import image2 from '../../assets/neiron3.png'
+import image3 from '../../assets/neiron4.jpg'
+import {Card, Image} from 'antd';
+import {InstagramOutlined, CodepenOutlined, GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 
 export function LoremIpsum() {
     return (
@@ -39,8 +43,56 @@ export function LoremIpsum() {
 Жалпы, Дәулетова Елизаттың дипломдық жұмысы қазақ тіліндегі компьютерлік лингвистика саласындағы маңызды жұмыс болып табылады және осы саладағы одан әрі зерттеулер үшін негіз ретінде пайдаланылуы мүмкін.
           </p>
 
-    
+          <p style={{textAlign:'center'}}>
+          Қазақ тіліндегі қолжазба мәтінді тануға арналған бағдарламалық қосымшаны әзірлеу" тақырыбындағы дипломдық жұмыс қазақ тіліндегі қолжазба мәтінді тануға және оны мәтіндік форматқа аударуға қабілетті бағдарламалық өнімді жасауды көздейді.
 
+Бұл мәселені шешу үшін диссертацияда машиналық оқытудың әртүрлі әдістері мен табиғи тілді өңдеу алгоритмдерін қолдануға болады. Модельді оқыту үшін деректерді жинау және дайындау маңызды кезең болып табылады, өйткені қолжазба мәтінін тану сапасына оқу үлгісінің сапасы мен әртүрлілігі айтарлықтай әсер етеді.
+
+Бағдарламалық қосымшаны құру үшін сізге тиісті технологиялар мен құралдарды таңдау керек, сонымен қатар пайдаланушы интерфейсін таңдау керек. Қосымша таңбалар мен диакритикалық белгілерді пайдалану сияқты қазақ тілінің ерекшеліктерін ескеру маңызды.
+
+Бағдарламалық жасақтаманың сапасын бағалау үшін тану дәлдігі мен өңдеу жылдамдығы сияқты әртүрлі көрсеткіштерді қолдануға болады. Бағдарламаның интерфейсі мен функционалдығына қатысты ықтимал мәселелерді анықтау үшін нақты пайдаланушылардың көмегімен тестілеуге болады.
+
+Дипломдық жұмыстың қорытынды мақсаты қазақ тіліндегі қолжазба мәтінді тану үшін толыққанды және тиімді бағдарламалық өнім жасау болып табылады, ол пайдаланушылардың пайдалануына ыңғайлы болады және білім, ғылым және бизнес сияқты түрлі салаларда қолданыла алады.
+</p>
+<div className="container-img">
+  <div className="image-container" style={{ padding: 5 }}>
+<Image
+
+style={{borderRadius:10,justifyContent: 'center' }}
+    width={300}
+    src={image}
+  />
+  <div className="caption">Cурет 1</div>
+</div>
+<div className="image-container" style={{ padding: 5 }}>
+  <Image
+style={{borderRadius:10,justifyContent: 'center'}}
+    width={300}
+    src={image1}
+  />
+   <div className="caption">Cурет 2</div>
+  </div>
+  <div className="image-container" style={{ padding: 5 }}>
+  <Image
+style={{borderRadius:10,justifyContent: 'center'}}
+    width={300}
+    src={image2}
+  />
+    <div className="caption">Cурет 3</div>
+  </div>
+  <div className="image-container" style={{ padding: 5 }}>
+  <Image
+style={{borderRadius:10,justifyContent: 'center'}}
+    width={300}
+    src={image3}
+  />
+    <div className="caption">Cурет 4</div>
+  </div>
+  </div>
+  <p > <strong>Сурет 1 </strong> - Нейрондық желілерді қолдану арқылы қолжазба мәтінін тану. </p>
+  <p > <strong>Сурет 2  </strong>  - Нейрондық желілердің визуалды түрі.</p>
+  <p > <strong>Сурет 3  </strong>  - Нейрондық желілінің істеу принціпі.</p>
+  <p > <strong>Сурет 4  </strong>  - Нейрондық желілерді қолдану арқылы қолжазба сандарды тану мысалы.</p>
         </article>
       </>
     );
@@ -64,8 +116,42 @@ export default function Main() {
       >
       <LoremIpsum />
       </Card>
+      <div style={{padding:10}}>
+      <Card title={"Байланыс"} >
+      <div className="social-icons">
+  <a href="https://codepen.io/" className="social-icon social-icon--codepen">
+    <i className="fa fa-codepen"></i>
+    <CodepenOutlined />
+    <div className="tooltip">Codepen</div>
+  </a>
+  <a href="https://github.com/" className="social-icon social-icon--github">
+    <i className="fa fa-github"></i>
+    <GithubOutlined />
+    <div className="tooltip">Github</div>
+  </a>
+  <a href= "https://www.instagram.com/elizat.toktarbekova/" className="social-icon social-icon--instagram">
+    <i className="fa fa-instagram"></i>
+    <InstagramOutlined/>
+    
+    <div className="tooltip">Instagram</div>
+    
+
+  </a>
+  <a href="https://linkedin.com/" className="social-icon social-icon--linkedin">
+    <i className="fa fa-linkedin"></i>
+    <LinkedinOutlined />
+    <div className="tooltip">LinkedIn</div>
+  </a>
+
+
+</div>
+</Card>
+</div>
+
       </div>
+      
 
     </>
   );
 }
+
