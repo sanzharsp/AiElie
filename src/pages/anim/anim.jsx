@@ -55,7 +55,7 @@ export default function Animations() {
         <>
     
         <div className="container" >
-          <div style={{padding:20}}>
+          <div style={{padding:10}}>
         <Trail2 open={open}>
         <Avatar className="avatar" src={<img src={url}  />} />
         </Trail2>
