@@ -1,12 +1,13 @@
-import { Card } from 'antd';
-import { Row, Col, Breadcrumb } from 'antd';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button, Skeleton,Result ,Typography, notification } from 'antd';
-import { SmileOutlined } from '@ant-design/icons';
+import { Button, Skeleton,Result ,Typography, notification, Layout, theme } from 'antd';
 import { CloseCircleOutlined,DeleteOutlined, UploadOutlined } from '@ant-design/icons';
+import { ArrowDownOutlined, ArrowUpOutlined,LoadingOutlined, SmileOutlined, SolutionOutlined, UserOutlined  } from '@ant-design/icons';
+import { Card, Col, Row, Statistic, Breadcrumb } from 'antd';
+import { Steps } from 'antd';
 import './style.css'
 const { Paragraph, Text } = Typography;
+const { Header, Content } = Layout;
 
 
 const Uploads = () => {
@@ -122,13 +123,98 @@ const Uploads = () => {
     setImage(event.target.files[0]);
     openNotification2();
   };
-
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
 
   return (
     <>
       {contextHolder2}
       {contextHolder}
-    
+      <Layout
+          style={{
+            padding: '0 24px 24px',
+          }}
+        >
+
+          <Content
+            style={{
+              padding: 24,
+              margin: 0,
+              minHeight: 280,
+              background: colorBgContainer,
+            }}
+          >
+
+      <Breadcrumb
+            style={{
+              margin: '16px 0',
+            }}
+          >
+            <Breadcrumb.Item >Басты бет</Breadcrumb.Item>
+            <Breadcrumb.Item>Болжау</Breadcrumb.Item>
+            <Breadcrumb.Item>Суретті болжау</Breadcrumb.Item>
+          </Breadcrumb>
+      <Row gutter={16}>
+    <Col span={12}>
+      <Card bordered={false}>
+        <Statistic
+          title="Болжау дәлдігі"
+          value={"8-9%"}
+          precision={2}
+          valueStyle={{
+            color: '#3f8600',
+          }}
+          prefix={<ArrowUpOutlined />}
+          suffix="%"
+        />
+      </Card>
+    </Col>
+    <Col span={12}>
+      <Card bordered={false}>
+        <Statistic
+          title="Қателесу дәлдігі"
+          value={'9.3%'}
+          precision={2}
+          valueStyle={{
+            color: '#cf1322',
+          }}
+          prefix={<ArrowDownOutlined />}
+          suffix="%"
+        />
+      </Card>
+    </Col>
+  </Row>
+  <br />
+      <Card bordered={false}>
+  <Steps
+    items={[
+      {
+        title: 'Сайтқа өту',
+        status: 'finish',
+        description: 'Сілтеме арқылы сайтқаа өту',
+        icon: <UserOutlined />,
+      },
+      {
+        title: 'Сурет таңдау',
+        status: 'finish',
+        description: 'сурет таңдау батырмасын таңдау',
+        icon: <SolutionOutlined />,
+      },
+      {
+        title: 'Батырма басу',
+        status: 'process',
+        description: 'Жүктеу батырмасын басу',
+        icon: <LoadingOutlined />,
+      },
+      {
+        title: 'Жауабты алу',
+        status: 'wait',
+        icon: <SmileOutlined />,
+      },
+    ]}
+  />
+   </Card>
       <div  style={{padding:10}}>
       <Card 
      
@@ -268,6 +354,8 @@ const Uploads = () => {
       </Card>
       
       </div>
+      </Content>
+        </Layout>
     </>
   );
 };

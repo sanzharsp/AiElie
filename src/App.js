@@ -4,7 +4,6 @@ import React from 'react';
 import './index.css';
 import Routings from './pages/Rounting/routing'
 import {BrowserRouter as Router} from "react-router-dom";
-
 function App() {
   <Routings /> 
   return (
