@@ -49,15 +49,15 @@ const Main = ({content}) => {
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} onClick={menu} items={items1} />
       </Header>
-      <Layout>
- 
+   
+      </Layout>
 
            
   
            {content}
       
-      </Layout>
-    </Layout>
+
+  
     </>
 }
     </>

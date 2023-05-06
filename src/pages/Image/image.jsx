@@ -131,6 +131,7 @@ const Uploads = () => {
     <>
       {contextHolder2}
       {contextHolder}
+      <Layout>
       <Layout
           style={{
             padding: '0 24px 24px',
@@ -355,6 +356,7 @@ const Uploads = () => {
       
       </div>
       </Content>
+        </Layout>
         </Layout>
     </>
   );

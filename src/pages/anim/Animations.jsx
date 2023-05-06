@@ -27,7 +27,7 @@ export default function App() {
     ref.current.forEach(clearTimeout)
     ref.current = []
     set([])
-    ref.current.push(setTimeout(() => set(['Менін',]), 100))
+    ref.current.push(setTimeout(() => set(['Менің',]), 100))
     ref.current.push(setTimeout(() => set(['жұмысым',]), 3000))
     ref.current.push(setTimeout(() => set(['туралы',]), 6000))
   }, [])
