@@ -83,7 +83,7 @@ export default function Animations() {
 
   
         <div className="container" >
-        <canvas id={canvasId} style={{ width:'100%',height:'113%', zIndex:-1000,position:'absolute'}}/>
+        <canvas id={canvasId} className='myCanvas' />
           <div style={{padding:10}}>
         <Trail2 open={open}>
         <Avatar className="avatar" src={<img src={url}  />} />
@@ -103,8 +103,12 @@ export default function Animations() {
         borderRadius: '0 0 10px 10px',
         paddingBottom: '5px',
         display: 'inline-block'
-      }}>ELIZAT</span>
-            <span>DAULETOVA</span>
+      }}>
+        ELIZAT
+        </span>
+        <span>
+          DAULETOVA
+        </span>
           </Trail>
    
         </div>
