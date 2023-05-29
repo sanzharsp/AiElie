@@ -161,7 +161,7 @@ const Uploads = () => {
       <Card bordered={false}>
         <Statistic
           title="Болжау дәлдігі"
-          value={"8-9%"}
+          value={"70"}
           precision={2}
           valueStyle={{
             color: '#3f8600',
@@ -175,7 +175,7 @@ const Uploads = () => {
       <Card bordered={false}>
         <Statistic
           title="Қателесу дәлдігі"
-          value={'9.3%'}
+          value={'30'}
           precision={2}
           valueStyle={{
             color: '#cf1322',
