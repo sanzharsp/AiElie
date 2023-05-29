@@ -30,7 +30,12 @@
   padding-right: 0.01em;
   overflow: hidden;
 }
-
+.myCanvas{
+  width:100%;
+  height:113%;
+  z-index:-1000;
+  position:absolute;
+}
 .container {
   display: flex;
   align-items: center;
@@ -62,22 +67,14 @@
     justify-content: center;
     margin-top: 180px;
   }
-
-}
-
-.myCanvas{
-  width:100%;
-  height:113%;
-  z-index:-1000;
-  position:absolute;
-}
-
-@media screen and (max-width: 600px) {
   .myCanvas{
     width:100%;
-    height:120%;
+    height:150%;
     z-index:-1000;
     position:absolute;
   }
 
 }
+
+
+
